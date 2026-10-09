@@ -1,0 +1,5 @@
+{"ts": 1791516224.8578238, "iso": "2026-10-09T03:23:44.857823+00:00", "step": "1_verify_target", "target": "b", "state": {"region": "b", "pool_state": "warm", "weights": true, "count": 200, "latest_doc_ts": 1791516217.8178153, "ts": 1791516224.853766}, "ok": true}
+{"ts": 1791516224.920331, "iso": "2026-10-09T03:23:44.920331+00:00", "step": "2_restore_snapshot", "target": "b", "ok": true, "duration_s": 0.06299999984912574, "snapshot_at": 1791516224.0206666, "source_region": "a", "latest_doc_ts": 1791516217.8178153, "embed_model_version": "embed-model=vi-e5-base@v3", "restored_at": 1791516224.9174936, "primary_latest_doc_ts": 1791516217.8178153, "restored_latest_doc_ts": 1791516217.8178153, "rpo_seconds": 0.0, "docs_lost": 0}
+{"ts": 1791516224.9219918, "iso": "2026-10-09T03:23:44.921992+00:00", "step": "3_scale_pool", "target": "b", "ok": true}
+{"ts": 1791516232.5777102, "iso": "2026-10-09T03:23:52.577710+00:00", "step": "4_wait_ready", "target": "b", "ok": true, "waited_s": 7.655999999959022}
+{"ts": 1791516233.300473, "iso": "2026-10-09T03:23:53.300473+00:00", "step": "5_dns_cutover", "target": "b", "ok": true}

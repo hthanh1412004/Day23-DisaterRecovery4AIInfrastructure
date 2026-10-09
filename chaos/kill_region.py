@@ -40,6 +40,44 @@ PID_DIR = pathlib.Path("run")
 URL = {"a": "http://127.0.0.1:8001", "b": "http://127.0.0.1:8002"}
 
 
+def windows_process(pid, action):
+    """Native equivalent of POSIX signals; never use os.kill(pid, 0) on Windows."""
+    import ctypes
+    from ctypes import wintypes
+    kernel = ctypes.WinDLL("kernel32", use_last_error=True)
+    kernel.OpenProcess.argtypes = [wintypes.DWORD, wintypes.BOOL, wintypes.DWORD]
+    kernel.OpenProcess.restype = wintypes.HANDLE
+    kernel.CloseHandle.argtypes = [wintypes.HANDLE]
+    rights = 0x1000 if action == "alive" else (0x0001 if action == "stop" else 0x0800)
+    handle = kernel.OpenProcess(rights, False, pid)
+    if not handle:
+        if action == "alive":
+            return False
+        raise ctypes.WinError(ctypes.get_last_error())
+    try:
+        if action == "alive":
+            code = wintypes.DWORD()
+            kernel.GetExitCodeProcess.argtypes = [wintypes.HANDLE, ctypes.POINTER(wintypes.DWORD)]
+            if not kernel.GetExitCodeProcess(handle, ctypes.byref(code)):
+                raise ctypes.WinError(ctypes.get_last_error())
+            return code.value == 259
+        if action == "stop":
+            kernel.TerminateProcess.argtypes = [wintypes.HANDLE, wintypes.UINT]
+            if not kernel.TerminateProcess(handle, 1):
+                raise ctypes.WinError(ctypes.get_last_error())
+        else:
+            native = ctypes.WinDLL("ntdll")
+            call = native.NtSuspendProcess if action == "netblock" else native.NtResumeProcess
+            call.argtypes = [wintypes.HANDLE]
+            call.restype = ctypes.c_long
+            status = call(handle)
+            if status != 0:
+                raise OSError(f"Windows process {action} failed: {status:#x}")
+        return True
+    finally:
+        kernel.CloseHandle(handle)
+
+
 def event(**kw):
     EVENTS.parent.mkdir(parents=True, exist_ok=True)
     rec = {"ts": time.time(), "iso": time.strftime("%Y-%m-%dT%H:%M:%S", time.gmtime()), **kw}
@@ -68,6 +106,8 @@ def pid_of(region: str) -> int | None:
     if not f.exists():
         return None
     pid = int(f.read_text().strip())
+    if os.name == "nt":
+        return pid if windows_process(pid, "alive") else None
     try:
         os.kill(pid, 0)
         return pid
@@ -96,7 +136,10 @@ def kill(region: str, mode: str, backend: str, force_both: bool, mock: bool):
         # netblock: SIGSTOP -> TCP handshake vẫn xong nhưng không ai trả lời => request TREO
         #           (đúng hành vi của iptables DROP ở tầng app)
         # stop    : SIGKILL -> cổng đóng => ConnectError ngay
-        os.kill(pid, signal.SIGSTOP if mode == "netblock" else signal.SIGKILL)
+        if os.name == "nt":
+            windows_process(pid, mode)
+        else:
+            os.kill(pid, signal.SIGSTOP if mode == "netblock" else signal.SIGKILL)
     else:
         svc = f"serving-{region}"
         if mode == "stop":
@@ -111,8 +154,12 @@ def restore(region: str, backend: str):
     if backend == "bare":
         pid = pid_of(region)
         if pid:
-            os.kill(pid, signal.SIGCONT)
-            return event(action="restore", region=region, method="SIGCONT", pid=pid)
+            if os.name == "nt":
+                windows_process(pid, "resume")
+            else:
+                os.kill(pid, signal.SIGCONT)
+            return event(action="restore", region=region,
+                         method="NtResumeProcess" if os.name == "nt" else "SIGCONT", pid=pid)
         return event(action="restore", region=region, method="need_manual_start",
                      note="process da bi SIGKILL, chay `make up-bare` lai")
     subprocess.run(["docker", "compose", "start", f"serving-{region}"], check=False)

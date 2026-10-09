@@ -1,0 +1,132 @@
+{
+  "timings": [
+    {
+      "ts": 1791516223.7325675,
+      "backend": "fs",
+      "repetition": 1,
+      "put_s": 0.01600000006146729,
+      "get_s": 0.01500000013038516,
+      "db_sha256": "ed1b27c577b5fb64895db9039dc78202753ec1a98700bbe249a3b908d5861efa",
+      "manifest": {
+        "snapshot_at": 1791516223.6993804,
+        "source_region": "a",
+        "latest_doc_ts": 1791516217.8178153,
+        "embed_model_version": "embed-model=vi-e5-base@v3",
+        "restored_at": 1791516223.7315674
+      }
+    },
+    {
+      "ts": 1791516223.751802,
+      "backend": "fs",
+      "repetition": 2,
+      "put_s": 0.015999999828636646,
+      "get_s": 0.01600000006146729,
+      "db_sha256": "ed1b27c577b5fb64895db9039dc78202753ec1a98700bbe249a3b908d5861efa",
+      "manifest": {
+        "snapshot_at": 1791516223.7325675,
+        "source_region": "a",
+        "latest_doc_ts": 1791516217.8178153,
+        "embed_model_version": "embed-model=vi-e5-base@v3",
+        "restored_at": 1791516223.751802
+      }
+    },
+    {
+      "ts": 1791516223.769447,
+      "backend": "fs",
+      "repetition": 3,
+      "put_s": 0.0,
+      "get_s": 0.01500000013038516,
+      "db_sha256": "ed1b27c577b5fb64895db9039dc78202753ec1a98700bbe249a3b908d5861efa",
+      "manifest": {
+        "snapshot_at": 1791516223.751802,
+        "source_region": "a",
+        "latest_doc_ts": 1791516217.8178153,
+        "embed_model_version": "embed-model=vi-e5-base@v3",
+        "restored_at": 1791516223.769447
+      }
+    },
+    {
+      "ts": 1791516223.897739,
+      "backend": "minio",
+      "repetition": 1,
+      "put_s": 0.06299999984912574,
+      "get_s": 0.06200000015087426,
+      "db_sha256": "ed1b27c577b5fb64895db9039dc78202753ec1a98700bbe249a3b908d5861efa",
+      "manifest": {
+        "snapshot_at": 1791516223.769447,
+        "source_region": "a",
+        "latest_doc_ts": 1791516217.8178153,
+        "embed_model_version": "embed-model=vi-e5-base@v3",
+        "restored_at": 1791516223.8970659
+      }
+    },
+    {
+      "ts": 1791516224.0206666,
+      "backend": "minio",
+      "repetition": 2,
+      "put_s": 0.04699999978765845,
+      "get_s": 0.07800000021234155,
+      "db_sha256": "ed1b27c577b5fb64895db9039dc78202753ec1a98700bbe249a3b908d5861efa",
+      "manifest": {
+        "snapshot_at": 1791516223.897739,
+        "source_region": "a",
+        "latest_doc_ts": 1791516217.8178153,
+        "embed_model_version": "embed-model=vi-e5-base@v3",
+        "restored_at": 1791516224.0192964
+      }
+    },
+    {
+      "ts": 1791516224.1343362,
+      "backend": "minio",
+      "repetition": 3,
+      "put_s": 0.04699999978765845,
+      "get_s": 0.06300000008195639,
+      "db_sha256": "ed1b27c577b5fb64895db9039dc78202753ec1a98700bbe249a3b908d5861efa",
+      "manifest": {
+        "snapshot_at": 1791516224.0206666,
+        "source_region": "a",
+        "latest_doc_ts": 1791516217.8178153,
+        "embed_model_version": "embed-model=vi-e5-base@v3",
+        "restored_at": 1791516224.1335926
+      }
+    }
+  ],
+  "failover": {
+    "ok": true,
+    "target": "b",
+    "steps": [
+      "1_verify_target",
+      "2_restore_snapshot",
+      "3_scale_pool",
+      "4_wait_ready",
+      "5_dns_cutover"
+    ],
+    "snapshot_at": 1791516224.0206666,
+    "source_region": "a",
+    "latest_doc_ts": 1791516217.8178153,
+    "embed_model_version": "embed-model=vi-e5-base@v3",
+    "restored_at": 1791516224.9174936,
+    "primary_latest_doc_ts": 1791516217.8178153,
+    "restored_latest_doc_ts": 1791516217.8178153,
+    "rpo_seconds": 0.0,
+    "docs_lost": 0,
+    "state": {
+      "region": "b",
+      "pool_state": "full",
+      "weights": true,
+      "count": 200,
+      "latest_doc_ts": 1791516217.8178153,
+      "ts": 1791516233.2968788
+    }
+  },
+  "inference": {
+    "edge_region": "b",
+    "upstream_status": 200,
+    "edge_latency_ms": 732.0,
+    "region": "b",
+    "answer": "[b] Ticket #0: khach hoi ve hoa don thang 1, so tien 0d",
+    "doc_id": "a-doc-0000",
+    "doc_ingested_at": 1791516118.3178153,
+    "ts": 1791516240.7441723
+  }
+}

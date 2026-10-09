@@ -19,12 +19,21 @@ reports/*.json
 # File tam do test/thu nghiem sinh ra (khong phai bang chung)
 reports/_*.jsonl
 reports/runbook-run.jsonl
+!reports/runbook-run.jsonl
+!reports/measure-drill-1.json
+!reports/measure-drill-2.json
+!reports/verification.json
 
 # Python
 __pycache__/
 *.pyc
 .pytest_cache/
 .venv/
+.venv311/
+bonus/bin/
+bonus/data/
+bonus/terraform/.terraform/
+output/
 venv/
 
 # OS

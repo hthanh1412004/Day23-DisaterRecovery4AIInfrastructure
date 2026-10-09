@@ -1,0 +1,212 @@
+{
+  "counts": {
+    "a": 10,
+    "b": 10
+  },
+  "requests": [
+    {
+      "edge_region": "a",
+      "region": "a",
+      "answer": "[a] Ticket #0: khach hoi ve hoa don thang 1, so tien 0d",
+      "doc_id": "a-doc-0000",
+      "doc_ingested_at": 1791515934.0807815,
+      "ts": 1791516049.4633408
+    },
+    {
+      "edge_region": "b",
+      "region": "b",
+      "answer": "[b] Ticket #0: khach hoi ve hoa don thang 1, so tien 0d",
+      "doc_id": "a-doc-0000",
+      "doc_ingested_at": 1791515934.0807815,
+      "ts": 1791516050.1995697
+    },
+    {
+      "edge_region": "a",
+      "region": "a",
+      "answer": "[a] Ticket #0: khach hoi ve hoa don thang 1, so tien 0d",
+      "doc_id": "a-doc-0000",
+      "doc_ingested_at": 1791515934.0807815,
+      "ts": 1791516051.0370002
+    },
+    {
+      "edge_region": "b",
+      "region": "b",
+      "answer": "[b] Ticket #0: khach hoi ve hoa don thang 1, so tien 0d",
+      "doc_id": "a-doc-0000",
+      "doc_ingested_at": 1791515934.0807815,
+      "ts": 1791516051.7804966
+    },
+    {
+      "edge_region": "a",
+      "region": "a",
+      "answer": "[a] Ticket #0: khach hoi ve hoa don thang 1, so tien 0d",
+      "doc_id": "a-doc-0000",
+      "doc_ingested_at": 1791515934.0807815,
+      "ts": 1791516052.5120738
+    },
+    {
+      "edge_region": "b",
+      "region": "b",
+      "answer": "[b] Ticket #0: khach hoi ve hoa don thang 1, so tien 0d",
+      "doc_id": "a-doc-0000",
+      "doc_ingested_at": 1791515934.0807815,
+      "ts": 1791516053.2531338
+    },
+    {
+      "edge_region": "a",
+      "region": "a",
+      "answer": "[a] Ticket #0: khach hoi ve hoa don thang 1, so tien 0d",
+      "doc_id": "a-doc-0000",
+      "doc_ingested_at": 1791515934.0807815,
+      "ts": 1791516053.9938366
+    },
+    {
+      "edge_region": "b",
+      "region": "b",
+      "answer": "[b] Ticket #0: khach hoi ve hoa don thang 1, so tien 0d",
+      "doc_id": "a-doc-0000",
+      "doc_ingested_at": 1791515934.0807815,
+      "ts": 1791516055.4600115
+    },
+    {
+      "edge_region": "a",
+      "region": "a",
+      "answer": "[a] Ticket #0: khach hoi ve hoa don thang 1, so tien 0d",
+      "doc_id": "a-doc-0000",
+      "doc_ingested_at": 1791515934.0807815,
+      "ts": 1791516056.3817732
+    },
+    {
+      "edge_region": "b",
+      "region": "b",
+      "answer": "[b] Ticket #0: khach hoi ve hoa don thang 1, so tien 0d",
+      "doc_id": "a-doc-0000",
+      "doc_ingested_at": 1791515934.0807815,
+      "ts": 1791516057.1686797
+    },
+    {
+      "edge_region": "a",
+      "region": "a",
+      "answer": "[a] Ticket #0: khach hoi ve hoa don thang 1, so tien 0d",
+      "doc_id": "a-doc-0000",
+      "doc_ingested_at": 1791515934.0807815,
+      "ts": 1791516057.904917
+    },
+    {
+      "edge_region": "b",
+      "region": "b",
+      "answer": "[b] Ticket #0: khach hoi ve hoa don thang 1, so tien 0d",
+      "doc_id": "a-doc-0000",
+      "doc_ingested_at": 1791515934.0807815,
+      "ts": 1791516059.4588084
+    },
+    {
+      "edge_region": "a",
+      "region": "a",
+      "answer": "[a] Ticket #0: khach hoi ve hoa don thang 1, so tien 0d",
+      "doc_id": "a-doc-0000",
+      "doc_ingested_at": 1791515934.0807815,
+      "ts": 1791516061.5274363
+    },
+    {
+      "edge_region": "b",
+      "region": "b",
+      "answer": "[b] Ticket #0: khach hoi ve hoa don thang 1, so tien 0d",
+      "doc_id": "a-doc-0000",
+      "doc_ingested_at": 1791515934.0807815,
+      "ts": 1791516063.5674763
+    },
+    {
+      "edge_region": "a",
+      "region": "a",
+      "answer": "[a] Ticket #0: khach hoi ve hoa don thang 1, so tien 0d",
+      "doc_id": "a-doc-0000",
+      "doc_ingested_at": 1791515934.0807815,
+      "ts": 1791516065.625204
+    },
+    {
+      "edge_region": "b",
+      "region": "b",
+      "answer": "[b] Ticket #0: khach hoi ve hoa don thang 1, so tien 0d",
+      "doc_id": "a-doc-0000",
+      "doc_ingested_at": 1791515934.0807815,
+      "ts": 1791516067.4576719
+    },
+    {
+      "edge_region": "a",
+      "region": "a",
+      "answer": "[a] Ticket #0: khach hoi ve hoa don thang 1, so tien 0d",
+      "doc_id": "a-doc-0000",
+      "doc_ingested_at": 1791515934.0807815,
+      "ts": 1791516068.4577513
+    },
+    {
+      "edge_region": "b",
+      "region": "b",
+      "answer": "[b] Ticket #0: khach hoi ve hoa don thang 1, so tien 0d",
+      "doc_id": "a-doc-0000",
+      "doc_ingested_at": 1791515934.0807815,
+      "ts": 1791516069.4561462
+    },
+    {
+      "edge_region": "a",
+      "region": "a",
+      "answer": "[a] Ticket #0: khach hoi ve hoa don thang 1, so tien 0d",
+      "doc_id": "a-doc-0000",
+      "doc_ingested_at": 1791515934.0807815,
+      "ts": 1791516070.4498048
+    },
+    {
+      "edge_region": "b",
+      "region": "b",
+      "answer": "[b] Ticket #0: khach hoi ve hoa don thang 1, so tien 0d",
+      "doc_id": "a-doc-0000",
+      "doc_ingested_at": 1791515934.0807815,
+      "ts": 1791516071.3336647
+    }
+  ],
+  "permutations": [
+    {
+      "doc_id": "order-0",
+      "body": "b-v2",
+      "logical_clock": 2,
+      "region": "b"
+    },
+    {
+      "doc_id": "order-1",
+      "body": "b-v2",
+      "logical_clock": 2,
+      "region": "b"
+    },
+    {
+      "doc_id": "order-2",
+      "body": "b-v2",
+      "logical_clock": 2,
+      "region": "b"
+    },
+    {
+      "doc_id": "order-3",
+      "body": "b-v2",
+      "logical_clock": 2,
+      "region": "b"
+    },
+    {
+      "doc_id": "order-4",
+      "body": "b-v2",
+      "logical_clock": 2,
+      "region": "b"
+    },
+    {
+      "doc_id": "order-5",
+      "body": "b-v2",
+      "logical_clock": 2,
+      "region": "b"
+    }
+  ],
+  "concurrent_winner": {
+    "doc_id": "concurrent",
+    "body": "b-v2",
+    "logical_clock": 2,
+    "region": "b"
+  }
+}

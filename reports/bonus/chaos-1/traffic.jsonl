@@ -1,0 +1,24 @@
+{"seq": 0, "ts": 1791515136.4989135, "status": 200, "ok": true, "served_by": "a", "edge_region": "a", "doc_ingested_at": 1791515027.8486536, "error": null, "latency_ms": 1294.4}
+{"seq": 1, "ts": 1791515137.7933552, "status": 200, "ok": true, "served_by": "a", "edge_region": "a", "doc_ingested_at": 1791515027.8486536, "error": null, "latency_ms": 998.3}
+{"seq": 2, "ts": 1791515138.7916956, "status": 200, "ok": true, "served_by": "a", "edge_region": "a", "doc_ingested_at": 1791515027.8486536, "error": null, "latency_ms": 1042.6}
+{"seq": 3, "ts": 1791515139.8343208, "status": 200, "ok": true, "served_by": "a", "edge_region": "a", "doc_ingested_at": 1791515027.8486536, "error": null, "latency_ms": 1241.2}
+{"seq": 4, "ts": 1791515141.07548, "status": 200, "ok": true, "served_by": "a", "edge_region": "a", "doc_ingested_at": 1791515027.8486536, "error": null, "latency_ms": 1422.7}
+{"seq": 5, "ts": 1791515142.498175, "status": 200, "ok": true, "served_by": "a", "edge_region": "a", "doc_ingested_at": 1791515027.8486536, "error": null, "latency_ms": 1106.7}
+{"seq": 6, "ts": 1791515143.6049228, "status": 200, "ok": true, "served_by": "a", "edge_region": "a", "doc_ingested_at": 1791515027.8486536, "error": null, "latency_ms": 936.8}
+{"seq": 7, "ts": 1791515144.5417485, "status": 200, "ok": true, "served_by": "a", "edge_region": "a", "doc_ingested_at": 1791515027.8486536, "error": null, "latency_ms": 1127.4}
+{"seq": 8, "ts": 1791515145.6691048, "status": 200, "ok": true, "served_by": "a", "edge_region": "a", "doc_ingested_at": 1791515027.8486536, "error": null, "latency_ms": 1391.7}
+{"seq": 9, "ts": 1791515147.0607748, "status": null, "ok": false, "error": "ReadTimeout", "latency_ms": 3007.3}
+{"seq": 10, "ts": 1791515150.0680275, "status": null, "ok": false, "error": "ReadTimeout", "latency_ms": 3000.5}
+{"seq": 11, "ts": 1791515153.0684934, "status": null, "ok": false, "error": "ReadTimeout", "latency_ms": 3020.4}
+{"seq": 12, "ts": 1791515156.0889425, "status": null, "ok": false, "error": "ReadTimeout", "latency_ms": 3022.0}
+{"seq": 13, "ts": 1791515159.1109645, "status": null, "ok": false, "error": "ReadTimeout", "latency_ms": 3020.0}
+{"seq": 14, "ts": 1791515162.1309314, "status": null, "ok": false, "error": "ReadTimeout", "latency_ms": 3008.9}
+{"seq": 15, "ts": 1791515165.1398118, "status": null, "ok": false, "error": "ReadTimeout", "latency_ms": 3006.1}
+{"seq": 16, "ts": 1791515168.1458623, "status": null, "ok": false, "error": "ReadTimeout", "latency_ms": 3000.2}
+{"seq": 17, "ts": 1791515171.1460974, "status": null, "ok": false, "error": "ReadTimeout", "latency_ms": 3012.8}
+{"seq": 18, "ts": 1791515174.1589074, "status": null, "ok": false, "error": "ReadTimeout", "latency_ms": 3021.4}
+{"seq": 19, "ts": 1791515177.180288, "status": null, "ok": false, "error": "ReadTimeout", "latency_ms": 3019.9}
+{"seq": 20, "ts": 1791515180.200209, "status": null, "ok": false, "error": "ReadTimeout", "latency_ms": 3015.4}
+{"seq": 21, "ts": 1791515183.2155719, "status": null, "ok": false, "error": "ReadTimeout", "latency_ms": 3012.6}
+{"seq": 22, "ts": 1791515186.2281775, "status": null, "ok": false, "error": "ReadTimeout", "latency_ms": 3020.5}
+{"seq": 23, "ts": 1791515189.2487097, "status": null, "ok": false, "error": "ReadTimeout", "latency_ms": 3013.9}

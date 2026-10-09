@@ -1,0 +1,12 @@
+{
+  "ts": 1791516148.7618377,
+  "iso": "2026-10-09T03:22:28.761837+00:00",
+  "event": "pitr_recovered",
+  "rows": [
+    "keep",
+    "seed"
+  ],
+  "restore_duration_s": 3.577999999979511,
+  "rto_seconds": 3.7411534786224365,
+  "recovery_target_time": "2026-10-09 10:22:24.209578+07"
+}

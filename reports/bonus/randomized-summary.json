@@ -1,0 +1,177 @@
+{
+  "seed": 23,
+  "runs": [
+    {
+      "run": 1,
+      "kill_delay_s": 11.354600064291475,
+      "valid": true,
+      "invalid_reasons": [],
+      "warnings": [],
+      "killed_region": "a",
+      "recovered_by_region": "b",
+      "t_outage_iso": "2026-10-09T03:12:17",
+      "chaos_mode": "netblock",
+      "breakdown_seconds_from_t0": {
+        "user_thay_loi_dau_tien": 1.7,
+        "health_check_phat_hien": 15.5,
+        "dns_cutover": 47.5,
+        "request_thanh_cong_dau_tien": 48.9
+      },
+      "health_check_config": {
+        "interval_s": 5.0,
+        "threshold": 3,
+        "detect_floor_s": 15.0
+      },
+      "rto_measured_s": 48.9,
+      "rto_target_s": 300,
+      "rto_verdict": "PASS",
+      "rpo_at_restore_s": 0.0,
+      "docs_lost": 0,
+      "requests_failed": 16,
+      "evidence": {
+        "loadgen": "reports\\bonus\\campaign-1791515512\\chaos-1\\traffic.jsonl",
+        "chaos": "chaos/chaos-events.jsonl",
+        "health": "reports\\bonus\\campaign-1791515512\\chaos-1\\health.jsonl",
+        "failover": "reports\\bonus\\campaign-1791515512\\chaos-1\\failover.jsonl"
+      }
+    },
+    {
+      "run": 2,
+      "kill_delay_s": 6.102459606171871,
+      "valid": true,
+      "invalid_reasons": [],
+      "warnings": [],
+      "killed_region": "a",
+      "recovered_by_region": "b",
+      "t_outage_iso": "2026-10-09T03:13:44",
+      "chaos_mode": "stop",
+      "breakdown_seconds_from_t0": {
+        "user_thay_loi_dau_tien": 1.6,
+        "health_check_phat_hien": 15.4,
+        "dns_cutover": 47.6,
+        "request_thanh_cong_dau_tien": 51.8
+      },
+      "health_check_config": {
+        "interval_s": 5.0,
+        "threshold": 3,
+        "detect_floor_s": 15.0
+      },
+      "rto_measured_s": 51.8,
+      "rto_target_s": 300,
+      "rto_verdict": "PASS",
+      "rpo_at_restore_s": 0.0,
+      "docs_lost": 0,
+      "requests_failed": 17,
+      "evidence": {
+        "loadgen": "reports\\bonus\\campaign-1791515512\\chaos-2\\traffic.jsonl",
+        "chaos": "chaos/chaos-events.jsonl",
+        "health": "reports\\bonus\\campaign-1791515512\\chaos-2\\health.jsonl",
+        "failover": "reports\\bonus\\campaign-1791515512\\chaos-2\\failover.jsonl"
+      }
+    },
+    {
+      "run": 3,
+      "kill_delay_s": 8.542484449409768,
+      "valid": true,
+      "invalid_reasons": [],
+      "warnings": [],
+      "killed_region": "a",
+      "recovered_by_region": "b",
+      "t_outage_iso": "2026-10-09T03:15:19",
+      "chaos_mode": "netblock",
+      "breakdown_seconds_from_t0": {
+        "user_thay_loi_dau_tien": 2.6,
+        "health_check_phat_hien": 13.3,
+        "dns_cutover": 44.4,
+        "request_thanh_cong_dau_tien": 46.6
+      },
+      "health_check_config": {
+        "interval_s": 5.0,
+        "threshold": 3,
+        "detect_floor_s": 15.0
+      },
+      "rto_measured_s": 46.6,
+      "rto_target_s": 300,
+      "rto_verdict": "PASS",
+      "rpo_at_restore_s": 0.0,
+      "docs_lost": 0,
+      "requests_failed": 15,
+      "evidence": {
+        "loadgen": "reports\\bonus\\campaign-1791515512\\chaos-3\\traffic.jsonl",
+        "chaos": "chaos/chaos-events.jsonl",
+        "health": "reports\\bonus\\campaign-1791515512\\chaos-3\\health.jsonl",
+        "failover": "reports\\bonus\\campaign-1791515512\\chaos-3\\failover.jsonl"
+      }
+    },
+    {
+      "run": 4,
+      "kill_delay_s": 6.781817647484884,
+      "valid": true,
+      "invalid_reasons": [],
+      "warnings": [],
+      "killed_region": "a",
+      "recovered_by_region": "b",
+      "t_outage_iso": "2026-10-09T03:16:51",
+      "chaos_mode": "netblock",
+      "breakdown_seconds_from_t0": {
+        "user_thay_loi_dau_tien": 2.3,
+        "health_check_phat_hien": 15.3,
+        "dns_cutover": 47.3,
+        "request_thanh_cong_dau_tien": 48.9
+      },
+      "health_check_config": {
+        "interval_s": 5.0,
+        "threshold": 3,
+        "detect_floor_s": 15.0
+      },
+      "rto_measured_s": 48.9,
+      "rto_target_s": 300,
+      "rto_verdict": "PASS",
+      "rpo_at_restore_s": 0.0,
+      "docs_lost": 0,
+      "requests_failed": 16,
+      "evidence": {
+        "loadgen": "reports\\bonus\\campaign-1791515512\\chaos-4\\traffic.jsonl",
+        "chaos": "chaos/chaos-events.jsonl",
+        "health": "reports\\bonus\\campaign-1791515512\\chaos-4\\health.jsonl",
+        "failover": "reports\\bonus\\campaign-1791515512\\chaos-4\\failover.jsonl"
+      }
+    },
+    {
+      "run": 5,
+      "kill_delay_s": 7.604291637744318,
+      "valid": true,
+      "invalid_reasons": [],
+      "warnings": [],
+      "killed_region": "a",
+      "recovered_by_region": "b",
+      "t_outage_iso": "2026-10-09T03:18:26",
+      "chaos_mode": "stop",
+      "breakdown_seconds_from_t0": {
+        "user_thay_loi_dau_tien": 2.2,
+        "health_check_phat_hien": 14.2,
+        "dns_cutover": 46.5,
+        "request_thanh_cong_dau_tien": 51.8
+      },
+      "health_check_config": {
+        "interval_s": 5.0,
+        "threshold": 3,
+        "detect_floor_s": 15.0
+      },
+      "rto_measured_s": 51.8,
+      "rto_target_s": 300,
+      "rto_verdict": "PASS",
+      "rpo_at_restore_s": 0.0,
+      "docs_lost": 0,
+      "requests_failed": 17,
+      "evidence": {
+        "loadgen": "reports\\bonus\\campaign-1791515512\\chaos-5\\traffic.jsonl",
+        "chaos": "chaos/chaos-events.jsonl",
+        "health": "reports\\bonus\\campaign-1791515512\\chaos-5\\health.jsonl",
+        "failover": "reports\\bonus\\campaign-1791515512\\chaos-5\\failover.jsonl"
+      }
+    }
+  ],
+  "mean_rto_s": 49.6,
+  "sample_stddev_s": 2.216979927739535
+}

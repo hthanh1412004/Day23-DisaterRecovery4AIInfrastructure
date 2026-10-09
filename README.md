@@ -63,7 +63,62 @@ reports/    Templates you fill in: runbook.md, rto-evidence.md, postmortem.md.
 scripts/    up_bare.sh / down_bare.sh — start/stop the stack without Docker.
 ```
 
-## Where to Go Next
+## Completed submission — Nguyễn Hữu Thành (2A202602807)
+
+Core implementation is complete in `dr/`. Real baseline: `NO_RECOVERY`.
+Measured DR drill: **RTO 37.7s, RPO 14.02s / 7 documents**, recovered by Region B,
+valid with no warnings. See [evidence](reports/rto-evidence.md),
+[runbook](reports/runbook.md), [postmortem](reports/postmortem.md), and
+[all six bonus tasks](reports/bonus.md).
+
+Windows verification (Python 3.11 virtualenv; UTF-8 is required because the starter
+evidence tests read Vietnamese Markdown using the default system encoding):
+
+```powershell
+.\.venv311\Scripts\python.exe -X utf8 -m pytest tests/ -v
+```
+
+The 13 original tests and 3 additional safety tests pass. Original grading tests,
+serving API, edge proxy and measurement tool are unchanged. Unit tests run in a
+temporary directory to avoid appending mocked events to drill evidence.
+
+Reproduce core drills (resets generated lab state; ports 8001/8002/8080 must be free):
+
+```powershell
+.\.venv311\Scripts\python.exe -X utf8 scripts/lab.py core
+.\.venv311\Scripts\python.exe -X utf8 scripts/write_reports.py
+```
+
+The runner owns and cleans up the service processes it launches. Windows chaos
+uses native process suspend/resume instead of POSIX signals, and records the real
+interpreter PID instead of the virtualenv launcher PID. This is a portability fix;
+the readiness and warm-up behavior is preserved.
+
+Bonus entry points: `scripts/lab.py randomized`, `bonus/verify_active_active.py`,
+`bonus/pitr.py`, `bonus/minio_drill.py`. Run service-based demos sequentially since
+they share ports. Runtime binaries and caches live under ignored `bonus/bin` and
+`bonus/data`; they are excluded from the submission.
+
+To reproduce PostgreSQL on Windows, `python scripts/fetch_portable.py` downloads
+the official portable runtime with HTTP Range and checks ZIP CRCs. For MinIO,
+`python scripts/fetch_go.py` downloads Go 1.24.2 and validates its official SHA256.
+Then build the pinned source tag inside the workspace:
+
+```powershell
+$env:GOBIN = Join-Path (Get-Location) 'bonus\bin'
+$env:GOPATH = Join-Path (Get-Location) 'bonus\data\gopath'
+$env:GOCACHE = Join-Path (Get-Location) 'bonus\data\gocache'
+$env:GOTOOLCHAIN = 'local'
+$env:CGO_ENABLED = '0'
+.\bonus\bin\go\bin\go.exe install github.com/minio/minio@RELEASE.2025-09-07T16-13-09Z
+```
+
+Terraform is write-only; only `init -backend=false`, `fmt -check`, and `validate`
+were run. No AWS resources were created. Package source plus evidence with
+`python scripts/package_submission.py`; the output is
+`output/D23-NguyenHuuThanh-2A202602807.zip`.
+
+## Lab references
 
 | Document | Purpose |
 |---|---|
